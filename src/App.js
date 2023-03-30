@@ -22,7 +22,7 @@ function App() {
 ]
 
   return (
-    <div>
+    <div className='expenses'>
       <ExpenseItem 
         title={products[0].title}
         price={products[0].price}
