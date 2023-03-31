@@ -1,44 +1,41 @@
-import './App.css';
-import ExpenseItem from './components/ExpenseItem';
+import React from 'react';
 
-function App() {
+import Expenses from './components/Expenses/Expenses';
 
-  const products = [
+const App = () => {
+  const expenses = [
     {
-    title: "Car",
-    price: 2000,
-    date: new Date(2023, 3, 27)
-  },
-  {
-    title: "TV",
-    price: 500,
-    date: new Date(2022, 12, 25)
-  },
-  {
-    title: "Wooden Table",
-    price: 200,
-    date: new Date(2023, 2, 10)
-  },
-]
+      id: 'e1',
+      title: 'Toilet Paper',
+      amount: 94.12,
+      date: new Date(2020, 7, 14),
+    },
+    { id: 'e2', title: 'New TV', amount: 799.49, date: new Date(2021, 2, 12) },
+    {
+      id: 'e3',
+      title: 'Car Insurance',
+      amount: 294.67,
+      date: new Date(2021, 2, 28),
+    },
+    {
+      id: 'e4',
+      title: 'New Desk (Wooden)',
+      amount: 450,
+      date: new Date(2021, 5, 12),
+    },
+  ];
+
+  // return React.createElement(
+  //   'div',
+  //   {},
+  //   React.createElement('h2', {}, "Let's get started!"),
+  //   React.createElement(Expenses, { items: expenses })
+  // );
 
   return (
-    <div className='expenses'>
-      <ExpenseItem 
-        title={products[0].title}
-        price={products[0].price}
-        date={products[0].date}
-      ></ExpenseItem>
-      <ExpenseItem 
-        title={products[1].title}
-        price={products[1].price}
-        date={products[1].date}
-      ></ExpenseItem>
-      <ExpenseItem 
-        title={products[2].title}
-        price={products[2].price}
-        date={products[2].date}
-      ></ExpenseItem>
-      
+    <div>
+      <h2>Let's get started!</h2>
+      <Expenses items={expenses} />
     </div>
   );
 }
