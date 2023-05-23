@@ -30,7 +30,7 @@ const NewExpense = (props) => {
   if (isFormShown) {
     formContent = (
       <ExpenseForm
-        onCancelExpenseForm={cancelExpenseForm}
+        onCancel={cancelExpenseForm}
         onSaveExpenseData={saveExpenseDataHandler}
       />
     );
